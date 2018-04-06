@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Train Schedule</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1>TRAIN TIME</h1>
+            <span class="small">Get The Schedule</span>
+        </header>
+        <form action="#">
+            <h2 class="formTitle">Add Train</h2>
+            <label for="tname" class="ltname">Train Name</label>
+            <input type="text" class="itname" id="name" name="name" placeholder="Place Name">
+        
+            <label class="ldestination" for="destination">Destination</label>
+            <input class="idestination" type="text" id="destination" name="destination" placeholder="Where To?">
+
+            <label class="lstartTime" for="startTime">1st Train Time (HH:mm - military time)</label>
+            <input class="istartTime" type="text" id="startTime" name="startTime" placeholder="Start Time">
+            
+            <input class="isubmit" type="submit" value="Submit">
+        </form>
+        <section class="schedule">
+                <h2 class="scheduleTitle">Current Train Schedule</h2>
+                <div class="initLabels infoRow">
+                    <div class="displayTrainName">
+                        <h3>Train Name</h3>
+                    </div>
+                    <div class="displayDestination">
+                        <h3>Destination</h3>
+                    </div>
+                    <div class="displayFrequency">
+                        <h3>Frequency (min)</h3>
+                    </div>
+                    <div class="displayNextArrival">
+                        <h3>Next Arrival</h3>
+                    </div>
+                    <div class="displayMinutesAway">
+                        <h3>Minutes Away</h3>
+                    </div>
+                </div>
+                <div class="infoRow">
+                        <div class="displayTrainName">
+                            <h3>Train Name</h3>
+                        </div>
+                        <div class="displayDestination">
+                            <h3>Destination</h3>
+                        </div>
+                        <div class="displayFrequency">
+                            <h3>Frequency (min)</h3>
+                        </div>
+                        <div class="displayNextArrival">
+                            <h3>Next Arrival</h3>
+                        </div>
+                        <div class="displayMinutesAway">
+                            <h3>Minutes Away</h3>
+                        </div>
+                    </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

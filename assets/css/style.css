@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding:0;
+    color: #fff;
+}
+body {
+    background-color:#747f88;
+}
+h1 {
+    font-size: 23px;
+    font-weight: 600;
+}
+h2 {
+    font-size:19px;
+    font-weight:600;
+}
+header h1 {
+    color:#ffc107;
+}
+label, input, h3  {
+    font-weight:100;
+    font-size:14px;
+    margin:0;
+} 
+label, [type=submit] {
+    margin-top:8px;
+}
+input  {
+    border: none;
+    background-color: #505a63;
+    border-radius: 4px;
+}
+[type=submit] {
+    max-width: 97px;
+    border:1px solid #fff;
+    background-color:#747f88;
+}
+[type=submit]:hover {
+    border:1px solid #505a63;
+    background-color:#66737d;
+}
+.small {
+    font-weight:100;
+    font-size:19px;
+}
+.initLabels h3 {
+    margin-bottom: 12px;
+    border-bottom: 1px solid #ffc107;
+    font-weight: 300;
+    font-size: 14px;
+    padding-bottom: 3px;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    padding-left: 5px;
+    color: #838a91;
+    opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    padding-left: 5px;
+    color: #838a91;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    padding-left: 5px;
+    color: #838a91;
+}
+.wrapper {
+    padding:20px;
+    grid-row-gap: 30px;
+    grid-column-gap: 10px;
+    margin: 0 auto;
+    max-width:740px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "header header form form form"
+    "schedule schedule schedule schedule schedule";
+}
+header {
+    grid-area: header;
+}
+form {
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "formTitle . ."
+    "ltname ltname ltname"
+    "itname itname itname"
+    "ldestination ldestination ldestination"
+    "idestination idestination idestination"
+    "lstartTime lstartTime lstartTime"
+    "istartTime istartTime istartTime"
+    ". isubmit .";
+}
+.formTitle {
+    grid-area: formTitle;
+}
+.ltname {
+    grid-area: ltname;
+}
+.itname {
+    grid-area: itname;
+}
+.ldestination {
+    grid-area: ldestination;
+}
+.idestination {
+    grid-area: idestination;
+}
+.lstartTime {
+    grid-area: lstartTime;
+}
+.istartTime {
+    grid-area: istartTime;
+}
+.isubmit {
+    grid-area: isubmit;
+}
+.schedule {
+    grid-area: schedule;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+}
+.scheduleTitle {
+    grid-column: 1 ;
+}
+.infoRow {
+    grid-column: 1 ;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: min-content;
+}
+.displayTrainName {
+    grid-column: 1 / 2;
+}
+.displayDestination {
+    grid-column: 2 / 3;
+}
+.displayFrequency {
+    grid-column: 3 / 4;
+}
+.displayNextArrival {
+    grid-column: 4 / 5;
+}
+.displayMinutesAway {
+    grid-column: 5 / 6;
+}
