@@ -41,6 +41,13 @@ input  {
     border:1px solid #505a63;
     background-color:#66737d;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+inner::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
 .small {
     font-weight:100;
     font-size:19px;
@@ -49,7 +56,7 @@ input  {
     margin-bottom: 12px;
     border-bottom: 1px solid #ffc107;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 15px;
     padding-bottom: 3px;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -85,7 +92,7 @@ form {
     grid-area: form;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "formTitle . ."
     "ltname ltname ltname"
@@ -94,6 +101,8 @@ form {
     "idestination idestination idestination"
     "lstartTime lstartTime lstartTime"
     "istartTime istartTime istartTime"
+    "lfrequency lfrequency lfrequency"
+    "ifrequency ifrequency ifrequency"
     ". isubmit .";
 }
 .formTitle {
@@ -116,6 +125,15 @@ form {
 }
 .istartTime {
     grid-area: istartTime;
+}
+.infoRow.testdiv {
+    display:none;
+}
+.lfrequency {
+    grid-area: lfrequency;
+}
+.ifrequency {
+    grid-area: ifrequency;
 }
 .isubmit {
     grid-area: isubmit;

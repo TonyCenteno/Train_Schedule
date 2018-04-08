@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600" rel="stylesheet">
 
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 <body>
 
@@ -16,7 +18,7 @@
             <h1>TRAIN TIME</h1>
             <span class="small">Get The Schedule</span>
         </header>
-        <form action="#">
+        <form action="#" id="theform">
             <h2 class="formTitle">Add Train</h2>
             <label for="tname" class="ltname">Train Name</label>
             <input type="text" class="itname" id="name" name="name" placeholder="Place Name">
@@ -26,6 +28,9 @@
 
             <label class="lstartTime" for="startTime">1st Train Time (HH:mm - military time)</label>
             <input class="istartTime" type="text" id="startTime" name="startTime" placeholder="Start Time">
+
+            <label class="lfrequency" for="frequency">Frequency (min)</label>
+            <input class="ifrequency" type="text" id="frequency" name="frequency" placeholder="Frequency">
             
             <input class="isubmit" type="submit" value="Submit">
         </form>
@@ -48,7 +53,7 @@
                         <h3>Minutes Away</h3>
                     </div>
                 </div>
-                <div class="infoRow">
+                <div class="infoRow testdiv">
                         <div class="displayTrainName">
                             <h3>Train Name</h3>
                         </div>
@@ -68,6 +73,8 @@
         </section>
 
     </div>
-
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
